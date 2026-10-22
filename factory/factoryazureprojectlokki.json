@@ -1,0 +1,15 @@
+{
+	"name": "factoryazureprojectlokki",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "dc2bec2f-fbcb-4f75-9b8a-2c8226eddc2b",
+		"tenantId": "5e2e586d-040a-41b8-8ec3-fb75d6caf3a9"
+	}
+}
