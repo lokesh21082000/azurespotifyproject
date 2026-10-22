@@ -65,7 +65,15 @@
 				"outputs": [
 					{
 						"referenceName": "Parquet_dynamic",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"container": "bronze",
+							"folder": "folder",
+							"file": {
+								"value": "@concat(pipeline().parameters.table, ' ',variables('current'))",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			},
@@ -101,7 +109,8 @@
 							"folder": "cdc",
 							"file": "cdc.json"
 						}
-					}
+					},
+					"firstRowOnly": false
 				}
 			},
 			{
